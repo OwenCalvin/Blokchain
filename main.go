@@ -1,15 +1,18 @@
 package main
 
 import (
-	"block"
+	bc "blockchain"
 	"fmt"
 )
 
 func main() {
-	b1 := block.Block{
+	block1 := bc.Block{
 		Hash: "d",
 		Prev: "d",
 		Data: "s",
 	}
-	fmt.Printf("Test %s", b1.Hash)
+	bc := bc.Blockchain{
+		Blocks: []bc.Block{block1},
+	}
+	fmt.Printf("Test %s", bc.Blocks[0].Hash)
 }

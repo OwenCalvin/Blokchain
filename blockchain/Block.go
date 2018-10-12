@@ -1,4 +1,4 @@
-package block
+package blockchain
 
 // Block is a block in the blockchain
 type Block struct {
